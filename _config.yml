@@ -20,6 +20,10 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 collections:
   electronics:
     output: true
+  pico:
+    output: true
+  uxn:
+    output: true
 
 defaults:
   - scope:

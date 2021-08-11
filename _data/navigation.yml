@@ -1,2 +1,6 @@
 - name: Electronics
   link: /electronics.html
+- name: Pico
+  link: /pico.html
+- name: Uxn
+  link: /uxn.html
