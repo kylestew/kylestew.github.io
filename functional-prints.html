@@ -1,0 +1,30 @@
+---
+layout: default
+title: Electronics
+---
+
+<h1>{{ page.title }}</h1>
+
+<h2>Why?</h2>
+
+<p>
+I believe in the potential of 3D printers. They have the ability to create on demand solutions that no company would
+feel they have enough profit motive to create for you. They allow everyone to make decisions as to what they want their
+surroundings to be built like. Everyone has access to create and build now, instead of this ability being locked in to a
+select few. 
+</p>
+
+<p>
+3D printers may never fully live up to their hype. I want to explore here the idea of functional 3D prints. Further
+exploration will be around making parametric designs that allow others to customize the design without being a designer
+themselves. Intelligent decisions can be made by the original designer to allow others the ability to make the final few
+customizations needed to truly adapt the product to their needs.
+</p>
+
+<ul>
+    {% for datum in site.functional-prints %}
+    <li>
+        <h2><a href="{{ datum.url }}">{{ datum.title }}</a></h2>
+    </li>
+    {% endfor %}
+</ul>

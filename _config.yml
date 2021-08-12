@@ -24,6 +24,8 @@ collections:
     output: true
   uxn:
     output: true
+  functional-prints:
+    output: true
 
 defaults:
   - scope:
