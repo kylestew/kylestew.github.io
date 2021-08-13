@@ -2,6 +2,10 @@
 title: Paper Tray
 ---
 
+![image tooltip here](/assets/images/functional-prints/paper-tray.jpg)
+
+(TODO: photo of finished print)
+
 ## Purpose
 
 (why I decided to make it)

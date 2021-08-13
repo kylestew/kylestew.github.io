@@ -29,6 +29,14 @@ collections:
 
 defaults:
   - scope:
+      path: "assets/img"
+    values:
+      image: true
+  - scope:
+      path: "assets/ico"
+    values:
+      image: true
+  - scope:
       path: ""
       type: "electronics"
     values:
