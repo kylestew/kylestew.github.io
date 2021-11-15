@@ -1,9 +1,10 @@
 ---
-title: 'Demo Project'
-subtitle: 'This is a demo'
+title: "Demo Project"
+subtitle: "This is a demo"
+published: false
 date: 2018-06-30 00:00:00
 description: This page is a demo that shows everything you can do inside portfolio and blog posts.
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: "/images/demo/demo-square.jpg"
 ---
 
 ![](/images/demo/demo-landscape.jpg)
@@ -14,13 +15,13 @@ This page is a demo that shows everything you can do inside portfolio and blog p
 
 We've included everything you need to create engaging posts about your work, and show off your case studies in a beautiful way.
 
-**Obviously,** we’ve styled up *all the basic* text formatting options [available in markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+**Obviously,** we’ve styled up _all the basic_ text formatting options [available in markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 You can create lists:
 
-* Simple bulleted lists
-* Like this one
-* Are cool
+- Simple bulleted lists
+- Like this one
+- Are cool
 
 And:
 
@@ -35,7 +36,7 @@ You can also add blockquotes, which are shown at a larger width to help break up
 The theme also supports markdown tables:
 
 | Item                 | Author        | Supports tables? | Price |
-|----------------------|---------------|------------------|-------|
+| -------------------- | ------------- | ---------------- | ----- |
 | Duet Jekyll Theme    | Jekyll Themes | Yes              | $49   |
 | Index Jekyll Theme   | Jekyll Themes | Yes              | $49   |
 | Journal Jekyll Theme | Jekyll Themes | Yes              | $49   |
@@ -65,14 +66,14 @@ Inspired by the Galleries feature from WordPress, we've made it easy to create g
 
 ```html
 <div class="gallery" data-columns="3">
-    <img src="/images/demo/demo-portrait.jpg">
-    <img src="/images/demo/demo-landscape.jpg">
-    <img src="/images/demo/demo-square.jpg">
-    <img src="/images/demo/demo-landscape-2.jpg">
+  <img src="/images/demo/demo-portrait.jpg" />
+  <img src="/images/demo/demo-landscape.jpg" />
+  <img src="/images/demo/demo-square.jpg" />
+  <img src="/images/demo/demo-landscape-2.jpg" />
 </div>
 ```
 
-*See what we did there? Code and syntax highlighting is built-in too!*
+_See what we did there? Code and syntax highlighting is built-in too!_
 
 Change the number inside the 'columns' setting to create different types of gallery for all kinds of purposes. You can even click on each image to seamlessly enlarge it on the page.
 
