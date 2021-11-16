@@ -1,29 +1,17 @@
 ---
-title: About Index
-subtitle: Index is a minimal, fixed sidebar grid portfolio Jekyll theme. Perfect for designers, artists, photographers and developers to use for their portfolio website.
-description: Index is a minimal, fixed sidebar grid portfolio Jekyll theme.
-featured_image: /images/demo/demo-landscape.jpg
+title: About
+subtitle: Hello my name is Kyle Stewart
+description: About this website
+featured_image: /images/profile.jpg
 ---
 
-![](/images/demo/demo-landscape.jpg)
+<img src="images/profile.jpg" alt="drawing" width="400"/>
 
-## Features
+## Creative Developer
 
-Index is packed with powerful features to showcase your work:
+Focused on the intersection of art and tech:
 
-- Beautiful, minimal design
-- Fixed sidebar menu
-- Two-column masonry grid layout
-- Responsive – works perfectly on all devices
-- Portfolio post type
-- Blog with pagination
-- Sleek Ajax navigation and page transitions
-- Unique 'gallery' feature for image grids and carousels
-- Built-in contact form with Formspree integration
-- Full markdown support and code highlighting
-- Social media icons
-- Fast page rendering
-- Built with SEO best practices in mind
-- Customize everything – colors, spacing, fonts, sizes etc. – via a simple settings file
-- Works with GitHub Pages
-- Updated and supported by the developers
+- Languages: Javascript, Python, Swift, C/C++
+- Unreal Engine
+- Houdini, Blender
+- Linear Algebra
