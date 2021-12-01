@@ -9,6 +9,4 @@ featured_image: "/images/subdiv/demo.png"
 
 <canvas id="gl-canvas"></canvas>
 
-Hi There
-
-<script type="module" src="{{ base.url | prepend: site.url }}/js/projects/webgl-demo/hello.js">script>
+<script type="module" src="{{ base.url | prepend: site.url }}/scripts/webgl-demo/hello.js">script>

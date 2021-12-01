@@ -3,6 +3,11 @@ site: Form + Structure
 url: https://formandstructure.co
 baseurl:
 
+exclude:
+  - package.json
+  - package-lock.json
+  - install-modules.mjs
+
 collections:
   pages:
     output: true

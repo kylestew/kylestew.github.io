@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "perspective-camera": "./perspective-camera.js",
+    "three": "./three.js"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "kylestew.github.io",
+  "scripts": {
+    "postinstall": "node install-modules.mjs"
+  },
+  "devDependencies": {
+    "esinstall": "^1.1.7"
+  },
+  "dependencies": {
+    "perspective-camera": "^2.0.1",
+    "three": "^0.135.0"
+  },
+  "esinstall": {
+    "install": [
+      "perspective-camera",
+      "three"
+    ]
+  }
+}
