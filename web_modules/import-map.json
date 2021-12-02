@@ -1,5 +1,8 @@
 {
   "imports": {
+    "camera-project": "./camera-project.js",
+    "canvas-sketch-util": "./canvas-sketch-util.js",
+    "gl-matrix": "./gl-matrix.js",
     "perspective-camera": "./perspective-camera.js",
     "three": "./three.js"
   }
