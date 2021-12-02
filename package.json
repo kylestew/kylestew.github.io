@@ -9,6 +9,7 @@
   "dependencies": {
     "camera-project": "^1.0.2",
     "canvas-sketch-util": "^1.10.0",
+    "flat-palettes": "^0.1.0",
     "gl-matrix": "^3.4.3",
     "perspective-camera": "^2.0.1",
     "three": "^0.135.0"
@@ -19,7 +20,8 @@
       "three",
       "camera-project",
       "gl-matrix",
-        "canvas-sketch-util"
+      "canvas-sketch-util",
+      "flat-palettes"
     ]
   }
 }
