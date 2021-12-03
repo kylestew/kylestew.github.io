@@ -4,10 +4,14 @@ url: https://formandstructure.co
 baseurl:
 
 exclude:
+  - web_modules
   - node_modules
   - package.json
   - package-lock.json
   - install-modules.mjs
+
+keep_files:
+  - web_modules
 
 collections:
   pages:
