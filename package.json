@@ -1,12 +1,31 @@
 {
   "name": "kylestew.github.io",
   "scripts": {
-    "postinstall": "node install-modules.mjs"
+    "postinstall": "node install-modules.mjs",
+    "clean": "rm -rf _site node_modules"
   },
   "devDependencies": {
     "esinstall": "^1.1.7"
   },
   "dependencies": {
+    "@thi.ng/api": "^8.3.2",
+    "@thi.ng/arrays": "^2.1.2",
+    "@thi.ng/checks": "^3.1.2",
+    "@thi.ng/defmulti": "^2.1.2",
+    "@thi.ng/equiv": "^2.1.2",
+    "@thi.ng/errors": "^2.1.2",
+    "@thi.ng/geom": "^3.1.5",
+    "@thi.ng/geom-api": "^3.1.5",
+    "@thi.ng/geom-hull": "^2.1.5",
+    "@thi.ng/geom-resample": "^2.1.5",
+    "@thi.ng/geom-subdiv-curve": "^2.1.5",
+    "@thi.ng/geom-tessellate": "^2.1.5",
+    "@thi.ng/math": "^5.1.2",
+    "@thi.ng/matrices": "^2.1.5",
+    "@thi.ng/random": "^3.2.2",
+    "@thi.ng/strings": "^3.3.0",
+    "@thi.ng/transducers": "^8.1.2",
+    "@thi.ng/vectors": "^7.4.1",
     "bezier-easing": "^2.1.0",
     "camera-project": "^1.0.2",
     "canvas-sketch-util": "^1.10.0",
@@ -17,15 +36,36 @@
     "three": "^0.135.0"
   },
   "esinstall": {
+    "installOptions": {
+      "dest": "_site/web_modules"
+    },
     "install": [
-      "perspective-camera",
-      "three",
+      "@thi.ng/api",
+      "@thi.ng/arrays",
+      "@thi.ng/checks",
+      "@thi.ng/defmulti",
+      "@thi.ng/equiv",
+      "@thi.ng/errors",
+      "@thi.ng/geom",
+      "@thi.ng/geom-api",
+      "@thi.ng/geom-hull",
+      "@thi.ng/geom-resample",
+      "@thi.ng/geom-subdiv-curve",
+      "@thi.ng/geom-tessellate",
+      "@thi.ng/math",
+      "@thi.ng/matrices",
+      "@thi.ng/random",
+      "@thi.ng/strings",
+      "@thi.ng/transducers",
+      "@thi.ng/vectors",
+      "bezier-easing",
       "camera-project",
-      "gl-matrix",
       "canvas-sketch-util",
-      "flat-palettes",
       "convex-hull",
-      "bezier-easing"
+      "flat-palettes",
+      "gl-matrix",
+      "perspective-camera",
+      "three"
     ]
   }
 }
