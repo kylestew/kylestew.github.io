@@ -1,4 +1,4 @@
-import { c as createCommonjsModule, a as commonjsGlobal, g as getDefaultExportFromNamespaceIfNotNamed } from './common/_commonjsHelpers-798ad6a7.js';
+import { c as createCommonjsModule, a as commonjsGlobal, g as getDefaultExportFromNamespaceIfNotNamed } from './common/commonjsHelpers-798ad6a7.js';
 import { d as defined } from './common/index-7ecbc9af.js';
 
 var seedRandom = createCommonjsModule(function (module) {

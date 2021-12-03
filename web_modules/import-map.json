@@ -1,5 +1,6 @@
 {
   "imports": {
+    "bezier-easing": "./bezier-easing.js",
     "camera-project": "./camera-project.js",
     "canvas-sketch-util": "./canvas-sketch-util.js",
     "convex-hull": "./convex-hull.js",

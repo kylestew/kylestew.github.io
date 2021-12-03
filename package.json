@@ -7,6 +7,7 @@
     "esinstall": "^1.1.7"
   },
   "dependencies": {
+    "bezier-easing": "^2.1.0",
     "camera-project": "^1.0.2",
     "canvas-sketch-util": "^1.10.0",
     "convex-hull": "^1.0.3",
@@ -23,7 +24,8 @@
       "gl-matrix",
       "canvas-sketch-util",
       "flat-palettes",
-      "convex-hull"
+      "convex-hull",
+      "bezier-easing"
     ]
   }
 }
