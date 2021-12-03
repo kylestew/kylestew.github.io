@@ -1,0 +1,22 @@
+const PI = Math.PI;
+const TAU = PI * 2;
+const HALF_PI = PI / 2;
+const THIRD_PI = PI / 3;
+const QUARTER_PI = PI / 4;
+const SIXTH_PI = PI / 6;
+const INV_PI = 1 / PI;
+const INV_TAU = 1 / TAU;
+const INV_HALF_PI = 1 / HALF_PI;
+const DEG2RAD = PI / 180;
+const RAD2DEG = 180 / PI;
+const PHI = (1 + Math.sqrt(5)) / 2;
+const SQRT2 = Math.SQRT2;
+const SQRT3 = Math.sqrt(3);
+const SQRT2_2 = SQRT2 / 2;
+const SQRT2_3 = SQRT3 / 2;
+const THIRD = 1 / 3;
+const TWO_THIRD = 2 / 3;
+const SIXTH = 1 / 6;
+let EPS = 1e-6;
+
+export { DEG2RAD as D, EPS as E, HALF_PI as H, INV_HALF_PI as I, PI as P, QUARTER_PI as Q, RAD2DEG as R, SQRT2_2 as S, TAU as T, SQRT3 as a, THIRD_PI as b, SIXTH_PI as c, INV_PI as d, INV_TAU as e, PHI as f, SQRT2 as g, SQRT2_3 as h, THIRD as i, TWO_THIRD as j, SIXTH as k };
