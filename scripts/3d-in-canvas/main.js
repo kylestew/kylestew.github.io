@@ -3,7 +3,7 @@ import createCrystalMesh from "./crystal-mesh.js";
 import createCamera from "/web_modules/perspective-camera.js";
 import cameraProject from "/web_modules/camera-project.js";
 import { mat4 } from "/web_modules/gl-matrix.js";
-import BezierEasing from "/web_modules/bezier-easing.js";
+// import BezierEasing from "/web_modules/bezier-easing.js";
 
 /*
  * TODO:
