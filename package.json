@@ -2,7 +2,7 @@
   "name": "kylestew.github.io",
   "scripts": {
     "postinstall": "node install-modules.mjs",
-    "clean": "rm -rf _site node_modules"
+    "clean": "rm -rf _site node_modules web_modules"
   },
   "devDependencies": {
     "esinstall": "^1.1.7"
