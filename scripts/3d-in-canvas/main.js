@@ -14,8 +14,8 @@ import BezierEasing from "/web_modules/bezier-easing.js";
 
 // == SETTINGS ==========================
 const pointCount = 9;
-const easeA = new BezierEasing(0.14, 0.28, 0.48, 0.45);
-const easeB = new BezierEasing(0.14, 0.28, 0.67, 0.46);
+// const easeA = new BezierEasing(0.14, 0.28, 0.48, 0.45);
+// const easeB = new BezierEasing(0.14, 0.28, 0.67, 0.46);
 const speed = 0.0001;
 const lineWidth = 4;
 const [background, primary, secondary] = colors(3);
@@ -85,8 +85,8 @@ function init() {
     const model = mat4.identity([]);
 
     // rotate the mesh in place
-    mat4.rotateY(model, model, easeA(playhead) * Math.PI * 2);
-    mat4.rotateX(model, model, easeB(playhead) * Math.PI * 2);
+    // mat4.rotateY(model, model, easeA(playhead) * Math.PI * 2);
+    // mat4.rotateX(model, model, easeB(playhead) * Math.PI * 2);
 
     // build MVP matrix
     const combined = mat4.identity([]);

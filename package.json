@@ -7,7 +7,6 @@
     "esinstall": "^1.1.7"
   },
   "dependencies": {
-    "bezier-easing": "^2.1.0",
     "camera-project": "^1.0.2",
     "canvas-sketch-util": "^1.10.0",
     "convex-hull": "^1.0.3",
@@ -17,9 +16,6 @@
     "three": "^0.135.0"
   },
   "esinstall": {
-    "installOptions": {
-      "dest": "_site/web_modules"
-    },
     "install": [
       "perspective-camera",
       "three",
@@ -27,8 +23,7 @@
       "gl-matrix",
       "canvas-sketch-util",
       "flat-palettes",
-      "convex-hull",
-      "bezier-easing"
+      "convex-hull"
     ]
   }
 }
