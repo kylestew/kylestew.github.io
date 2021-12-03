@@ -2,12 +2,10 @@ import { vec3 } from "/web_modules/gl-matrix.js";
 import { random } from "/web_modules/canvas-sketch-util.js";
 import convexHull from "/web_modules/convex-hull.js";
 
-const createCrystalMesh = () => {
+const createCrystalMesh = (pointCount) => {
   // crystal mesh is a convex hull of N random points on a sphere
-  const pointCount = 10;
-  const radius = 1;
   const positions = Array.from(new Array(pointCount)).map(() => {
-    return random.onSphere(radius);
+    return random.onSphere(1);
   });
 
   // center the mesh by finding its "centroid"
