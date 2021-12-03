@@ -8,8 +8,8 @@ import BezierEasing from "/web_modules/bezier-easing.js";
 /*
  * TODO:
  * - 2nd shape?
- * - ball ends
- * - move things
+ * - ball ends?
+ * - move things?
  */
 
 // == SETTINGS ==========================
@@ -46,8 +46,8 @@ function init() {
   // grab and setup canvas
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
-  const width = canvas.width;
-  const height = canvas.height;
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
   ctx.canvas.width = width;
   ctx.canvas.height = height;
 
