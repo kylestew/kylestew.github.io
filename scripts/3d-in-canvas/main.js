@@ -1,36 +1,8 @@
-import { vec3 } from "/web_modules/gl-matrix.js";
-import { random } from "/web_modules/canvas-sketch-util.js";
 import colors from "/web_modules/flat-palettes.js";
-
-// import createCamera from "../../web_modules/perspective-camera.js";
-// console.log(createCamera);
-
-const createMesh = () => {
-  // crystal mesh is a convex hull of N random points on a sphere
-  const pointCount = 10;
-  const radius = 200;
-  const positions = Array.from(new Array(pointCount)).map(() => {
-    return random.onSphere(radius);
-  });
-
-  // center the mesh by finding its "centroid"
-  const centroid = positions.reduce(
-    (sum, pos) => {
-      return vec3.add(sum, sum, pos);
-    },
-    [0, 0, 0]
-  );
-
-  // translate all points in the mesh away from centroid
-  positions.forEach((pos) => {
-    vec3.sub(pos, pos, centroid);
-  });
-
-  // get triangles (cells) of the 3D mesh
-  //...
-
-  return positions;
-};
+import createCrystalMesh from "./crystal-mesh.js";
+import createCamera from "/web_modules/perspective-camera.js";
+import cameraProject from "/web_modules/camera-project.js";
+import { RedIntegerFormat } from "three";
 
 const stroke = (ctx, points) => {
   ctx.beginPath();
@@ -38,7 +10,16 @@ const stroke = (ctx, points) => {
   ctx.stroke();
 };
 
+const drawCells = (ctx, positions, cells) => {
+  cells.forEach((cell) => {
+    const points = cell.map((i) => positions[i]);
+    points.push(points[0]);
+    stroke(ctx, points);
+  });
+};
+
 function init() {
+  // grab and setup canvas
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
   const width = canvas.width;
@@ -46,33 +27,50 @@ function init() {
   ctx.canvas.width = width;
   ctx.canvas.height = height;
 
-  console.log(width, height);
+  // setup 3D perspective camera
+  const camera = createCamera({
+    fov: (80 * Math.PI) / 180,
+    near: 0.01,
+    far: 1000,
+    viewport: [0, 0, width, height],
+  });
 
+  // create 3D mesh
+  let { cells, positions } = createCrystalMesh();
+  // console.log(cells, positions);
+
+  // randomize colors from palette
   let [background, foreground] = colors(2);
-  console.log(foreground, background);
-
-  let mesh = createMesh();
-  console.log(mesh);
-  let positions = mesh;
-
   ctx.fillStyle = background;
   ctx.fillRect(0, 0, width, height);
-
-  // "project" the 3D positions into 2D [x, y] points in pixel space
-  // positions
-  const points = positions;
-
-  // draw the mesh
-  // drawCells
   ctx.lineJoin = "round";
   ctx.lineCap = "round";
   ctx.strokeStyle = foreground;
   ctx.lineWidth = 8;
-  ctx.translate(width / 2, height / 2);
-  stroke(ctx, points);
+
+  function render() {
+    // truck camera back and point at world center
+    // const zOffset = Math.sin(playhead)
+    const zOffset = 1.0;
+    camera.identity();
+    camera.translate([0, 0, 3 + zOffset]);
+    camera.lookAt([0, 0, 0]);
+    camera.update();
+
+    // a 3D scene is made of:
+    // - 4x4 projection matrix
+    // - 4x4 view matrix
+    // - 4x4 model matrix
+    const projection = camera.projection;
+
+    // "project" the 3D positions into 2D [x, y] points in pixel space
+    //...
+
+    // draw the mesh
+    ctx.translate(width / 2, height / 2);
+    let points = positions;
+    drawCells(ctx, points, cells);
+  }
+  render();
 }
-console.log("in script");
-window.onload = function () {
-  console.log("onload");
-  init();
-};
+init();
