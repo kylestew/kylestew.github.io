@@ -1,5 +1,5 @@
 import colors from "/web_modules/flat-palettes.js";
-import createCrystalMesh from "./crystal-mesh.js";
+import { createCrystalMesh, centroid } from "./crystal-mesh.js";
 import createCamera from "/web_modules/perspective-camera.js";
 import cameraProject from "/web_modules/camera-project.js";
 import { mat4 } from "/web_modules/gl-matrix.js";
@@ -14,11 +14,11 @@ import BezierEasing from "/web_modules/bezier-easing.js";
 
 const settings = {
   loopTime: 8,
-  pointCountMin: 12,
+  pointCountMin: 6,
   pointCountMax: 16,
   easeA: new BezierEasing(0.14, 0.28, 0.48, 0.45),
   easeB: new BezierEasing(0.14, 0.28, 0.67, 0.46),
-  lineWidth: 4,
+  lineWidth: 3,
 };
 
 let camera = createCamera({
@@ -43,22 +43,30 @@ const drawCells = (ctx, positions, cells) => {
     ctx.beginPath();
     points.forEach((p) => ctx.lineTo(p[0], p[1]));
 
+    ctx.fillStyle = secondary + "22";
+    ctx.fill();
+
     ctx.strokeStyle = primary;
     ctx.lineWidth = settings.lineWidth;
     ctx.lineJoin = "round";
     ctx.lineCap = "round";
     ctx.stroke();
-
-    ctx.fillStyle = secondary + "AA";
-    ctx.fill();
   };
 
-  // TODO: sort by depth
-  cells.forEach((cell) => {
+  // determine centroid Z position of each cell
+  const depthCells = cells.map((cell) => {
     const points = cell.map((i) => positions[i]);
-    points.push(points[0]);
-    stroke(ctx, points);
+    const cent = centroid(points);
+    return { points: points, depth: cent[2] };
   });
+
+  // order by depth and render
+  depthCells
+    .sort((a, b) => b.depth - a.depth)
+    .forEach(({ points }) => {
+      points.push(points[0]);
+      stroke(ctx, points);
+    });
 };
 
 function render({ ctx, width, height, playhead }) {
